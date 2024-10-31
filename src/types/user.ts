@@ -14,3 +14,13 @@ export interface Profile {
   profilePicture: string;
   bio: string;
 }
+
+export interface UserJWTPayload {
+  id: number;
+  name: string;
+  address: string;
+  email: string;
+  iat: number;
+  exp: number;
+};
+

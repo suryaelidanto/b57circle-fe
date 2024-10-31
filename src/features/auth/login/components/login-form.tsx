@@ -21,13 +21,13 @@ export function LoginForm() {
         </Text>
         <Input
           placeholder="Email/Username"
-          {...register("emailOrUsername")}
+          {...register("email")}
           color={"white"}
         />
 
-        {errors.emailOrUsername ? (
+        {errors.email ? (
           <Text as={"span"} color={"red"}>
-            {errors.emailOrUsername.message}
+            {errors.email.message}
           </Text>
         ) : null}
 

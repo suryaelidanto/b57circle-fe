@@ -3,7 +3,11 @@ import { Outlet } from "react-router-dom";
 import { LeftBar } from "./components/left-bar";
 import { RightBar } from "./components/right-bar";
 
-export function AppLayout() {
+interface AppLayoutProps {
+  children: React.ReactNode;
+}
+
+export function AppLayout({ children }: AppLayoutProps) {
   //TODO: make check for token from cookies
 
   return (
@@ -11,7 +15,7 @@ export function AppLayout() {
       <LeftBar />
 
       <Box w={"561px"} p={"30px"}>
-        <Outlet />
+        {children}
       </Box>
 
       <RightBar />

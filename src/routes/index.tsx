@@ -1,4 +1,3 @@
-import { AppLayout } from "@/layouts/app/layout";
 import { createBrowserRouter } from "react-router-dom";
 import { DetailThreadRoute } from "./detail-thread";
 import { FollowsRoute } from "./follows";
@@ -6,13 +5,14 @@ import { ForgotPasswordRoute } from "./forgot-password";
 import { HomeRoute } from "./home";
 import { LoginRoute } from "./login";
 import { ProfileRoute } from "./profile";
+import { ProtectedRoute } from "./protected-route";
 import { RegisterRoute } from "./register";
 import { ResetPasswordRoute } from "./reset-password";
 import { SearchRoute } from "./search";
 
 export const router = createBrowserRouter([
   {
-    element: <AppLayout />,
+    element: <ProtectedRoute />,
     children: [
       {
         path: "/",
